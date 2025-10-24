@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeYourself - Hãy là chính mình</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background với gradient -->
+    <div class="background" id="background"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">BeYourself</a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Trang chủ</a>
+                <a href="#about" class="nav-link">Giới thiệu</a>
+                <a href="#spaces" class="nav-link">Không gian</a>
+                <a href="#community" class="nav-link">Cộng đồng</a>
+                <a href="#contact" class="nav-link">Liên hệ</a>
+                
+                <!-- User Menu (visible when logged in) -->
+                <div class="nav-user" id="navUser">
+                    <div class="user-avatar" id="userAvatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="dropdown-content">
+                            <a href="../public/authen.html?action=profile" class="dropdown-item">
+                                <i class="fas fa-user-circle"></i>
+                                <span>Hồ sơ của tôi</span>
+                            </a>
+                            <a href="#my-posts" class="dropdown-item">
+                                <i class="fas fa-edit"></i>
+                                <span>Bài viết của tôi</span>
+                            </a>
+                            <a href="#settings" class="dropdown-item">
+                                <i class="fas fa-cog"></i>
+                                <span>Cài đặt</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item logout" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Auth Buttons (visible when not logged in) -->
+            <div class="nav-auth" id="navAuth">
+                <a href="../public/authen.html?action=login" class="auth-link login">Đăng nhập</a>
+                <a href="../public/authen.html?action=register" class="auth-link register">Đăng ký</a>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>Dự án học sinh THPT Giồng Ông Tố</span>
+                </div>
+                <h1 class="hero-title">BeYourself</h1>
+                <h2 class="hero-subtitle">Hãy là chính mình, bắt đầu từ hôm nay</h2>
+                <p class="hero-text">
+                    BeYourself là trang web do nhóm Nghiên cứu khoa học trường THPT Giồng Ông Tố thực hiện, với mong muốn tạo nên một không gian nơi học sinh có thể chia sẻ và lắng nghe những câu chuyện về ngoại hình một cách cởi mở và tích cực.
+                </p>
+                <p class="hero-text">
+                    Chúng tôi tin rằng mỗi người đều có vẻ đẹp riêng và xứng đáng được tôn trọng, yêu thương theo cách của mình.
+                </p>
+                <div class="hero-actions">
+                    <a href="#spaces" class="cta-button primary">
+                        <i class="fas fa-rocket"></i>
+                        Khám phá ngay
+                    </a>
+                    <a href="../public/authen.html?action=register" class="cta-button secondary">
+                        <i class="fas fa-user-plus"></i>
+                        Tham gia ngay
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">Thành viên</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">Bài viết</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="3">0</span>
+                        <span class="stat-label">Podcast</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-cards">
+                    <div class="card card-1">
+                        <i class="fas fa-heart"></i>
+                        <h4>Tự tin</h4>
+                        <p>Yêu bản thân</p>
+                    </div>
+                    <div class="card card-2">
+                        <i class="fas fa-users"></i>
+                        <h4>Cộng đồng</h4>
+                        <p>Kết nối tích cực</p>
+                    </div>
+                    <div class="card card-3">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Sáng tạo</h4>
+                        <p>Thể hiện cá tính</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Cuộn để khám phá</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mục tiêu của chúng tôi</h2>
+                <p class="section-subtitle">Cùng nhau xây dựng một cộng đồng tích cực và đầy cảm hứng</p>
+            </div>
+            <div class="goals-container">
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Tự tin và yêu bản thân</h3>
+                    <p>Giúp học sinh tự tin và yêu bản thân hơn thông qua việc chia sẻ câu chuyện, cảm xúc và bài học tích cực.</p>
+                    <ul class="goal-features">
+                        <li><i class="fas fa-check"></i> Chia sẻ câu chuyện cá nhân</li>
+                        <li><i class="fas fa-check"></i> Bài học tích cực</li>
+                        <li><i class="fas fa-check"></i> Lời khuyên từ chuyên gia</li>
+                    </ul>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Kết nối và thấu hiểu</h3>
+                    <p>Xây dựng môi trường kết nối và thấu hiểu, nơi mọi người có thể trao đổi, lắng nghe và động viên nhau.</p>
+                    <ul class="goal-features">
+                        <li><i class="fas fa-check"></i> Diễn đàn thảo luận</li>
+                        <li><i class="fas fa-check"></i> Nhóm hỗ trợ</li>
+                        <li><i class="fas fa-check"></i> Sự kiện kết nối</li>
+                    </ul>
+                </div>
+                <div class="goal-card">
+                    <div class="goal-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Sống sáng tạo</h3>
+                    <p>Khơi gợi tinh thần sống sáng tạo để học sinh thể hiện bản thân qua bài viết, quotes, tips hoặc sản phẩm nghệ thuật.</p>
+                    <ul class="goal-features">
+                        <li><i class="fas fa-check"></i> Blog cá nhân</li>
+                        <li><i class="fas fa-check"></i> Gallery nghệ thuật</li>
+                        <li><i class="fas fa-check"></i> Cuộc thi sáng tạo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="spaces" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Không gian BeYourself</h2>
+                <p class="section-subtitle">Khám phá các tính năng độc đáo của cộng đồng chúng tôi</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Không gian tích cực</h3>
+                    <p>Nơi đăng tải các bài viết và podcast do nhóm admin thực hiện, mang đến những nội dung truyền cảm hứng và tích cực.</p>
+                    <div class="feature-stats">
+                        <span><i class="fas fa-newspaper"></i> 50+ bài viết</span>
+                        <span><i class="fas fa-podcast"></i> 20+ podcast</span>
+                    </div>
+                    <a href="../public/space.html" class="feature-link">Khám phá ngay <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Không gian sáng tạo</h3>
+                    <p>Nơi học sinh chia sẻ ý tưởng, câu quote hay, bài viết hoặc tranh vẽ của riêng mình trong môi trường an toàn.</p>
+                    <div class="feature-stats">
+                        <span><i class="fas fa-paint-brush"></i> 300+ tác phẩm</span>
+                        <span><i class="fas fa-quote-left"></i> 150+ quotes</span>
+                    </div>
+                    <a href="../public/space.html" class="feature-link">Tham gia ngay <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Ẩn danh có kiểm soát</h3>
+                    <p>Giúp người dùng thoải mái chia sẻ mà vẫn đảm bảo sự an toàn và tôn trọng với cộng đồng.</p>
+                    <div class="feature-stats">
+                        <span><i class="fas fa-shield-alt"></i> Bảo mật cao</span>
+                        <span><i class="fas fa-eye-slash"></i> Ẩn danh tùy chọn</span>
+                    </div>
+                    <a href="../public/space.html" class="feature-link">Tìm hiểu thêm <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Tương tác cộng đồng</h3>
+                    <p>Học sinh có thể like, bình luận, phản hồi hoặc tham gia thảo luận trong diễn đàn một cách lành mạnh.</p>
+                    <div class="feature-stats">
+                        <span><i class="fas fa-heart"></i> 5K+ lượt thích</span>
+                        <span><i class="fas fa-comment"></i> 2K+ bình luận</span>
+                    </div>
+                    <a href="../public/space.html" class="feature-link">Tham gia <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <div class="community-content">
+                <div class="community-text">
+                    <h2>Tham gia cộng đồng của chúng tôi</h2>
+                    <p>Hãy cùng lan tỏa thông điệp yêu thương và trân trọng giá trị của mỗi cá nhân. BeYourself không chỉ giúp bạn tự tin hơn về bản thân mà còn kết nối bạn với những người bạn đồng hành tuyệt vời.</p>
+                    
+                    <div class="community-stats">
+                        <div class="community-stat">
+                            <i class="fas fa-user-graduate"></i>
+                            <div>
+                                <h4>100%</h4>
+                                <p>Học sinh THPT</p>
+                            </div>
+                        </div>
+                        <div class="community-stat">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>24/7</h4>
+                                <p>Hỗ trợ trực tuyến</p>
+                            </div>
+                        </div>
+                        <div class="community-stat">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>An toàn</h4>
+                                <p>Môi trường tích cực</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="community-actions">
+                        <a href="../public/authen.html?action=register" class="cta-button primary">
+                            <i class="fas fa-user-plus"></i>
+                            Tham gia ngay
+                        </a>
+                        <a href="#testimonials" class="cta-button secondary">
+                            <i class="fas fa-play"></i>
+                            Nghe câu chuyện
+                        </a>
+                    </div>
+                </div>
+                <div class="community-visual">
+                    <div class="visual-container">
+                        <div class="floating-element el-1">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Nơi tuyệt vời để là chính mình"</p>
+                        </div>
+                        <div class="floating-element el-2">
+                            <i class="fas fa-heart"></i>
+                            <p>Cộng đồng tích cực</p>
+                        </div>
+                        <div class="floating-element el-3">
+                            <i class="fas fa-star"></i>
+                            <p>5★ đánh giá</p>
+                        </div>
+                        <div class="main-visual">
+                            <i class="fas fa-users"></i>
+                            <h4>Cộng đồng BeYourself</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>BeYourself Project</h2>
+                    <p class="contact-tagline">Lan tỏa sự tự tin – Yêu thương chính mình</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>beyourself.comnet2025@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-school"></i>
+                            <div>
+                                <h4>Trường học</h4>
+                                <p>THPT Giồng Ông Tố, TP.HCM</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Đội ngũ</h4>
+                                <p>Học sinh nghiên cứu khoa học</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-newsletter">
+                    <h3>Đăng ký nhận tin</h3>
+                    <p>Nhận thông báo về các sự kiện và nội dung mới nhất từ BeYourself</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Nhập email của bạn" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BeYourself</h3>
+                    <p>Nền tảng kết nối và chia sẻ dành cho học sinh, nơi mỗi cá nhân được là chính mình và lan tỏa năng lượng tích cực.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="#home">Trang chủ</a></li>
+                        <li><a href="#about">Về chúng tôi</a></li>
+                        <li><a href="#spaces">Không gian</a></li>
+                        <li><a href="#community">Cộng đồng</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Hướng dẫn sử dụng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> beyourself.comnet2025@gmail.com</p>
+                        <p><i class="fas fa-school"></i> THPT Giồng Ông Tố</p>
+                        <p><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BeYourself. Dự án được sáng lập bởi học sinh Trường THPT Giồng Ông Tố, TP.HCM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/script.js"></script>
+</body>
+</html>

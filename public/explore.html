@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám phá - BeYourself</title>
+    <link rel="stylesheet" href="../style/explore_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background với gradient -->
+    <div class="background" id="background"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../public/index.html">BeYourself</a>
+            </div>
+            <div class="nav-menu">
+                <a href="../public/index.html" class="nav-link">Trang chủ</a>
+                <a href="../public/index.html#about" class="nav-link">Giới thiệu</a>
+                <a href="../public/space.html" class="nav-link">Không gian</a>
+                <a href="../public/index.html#contact" class="nav-link">Liên hệ</a>
+                <div class="nav-user" id="navUser">
+                    <div class="user-avatar" id="userAvatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="dropdown-content">
+                            <a href="../public/authen.html?action=profile" class="dropdown-item">
+                                <i class="fas fa-user-circle"></i>
+                                <span>Trang cá nhân</span>
+                            </a>
+                            <a href="../public/authen.html?action=settings" class="dropdown-item">
+                                <i class="fas fa-cog"></i>
+                                <span>Cài đặt</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item logout" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-auth" id="navAuth">
+                <a href="../public/authen.html?action=login" class="auth-link login">Đăng nhập</a>
+                <a href="../public/authen.html?action=register" class="auth-link register">Đăng ký</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="explore-main">
+        <div class="container">
+            <!-- Header -->
+            <div class="explore-header">
+                <div class="breadcrumb">
+                    <a href="../public/space.html">Không gian</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Khám phá</span>
+                </div>
+                <h1>Khám phá cộng đồng</h1>
+                <p>Chia sẻ, kết nối và lan tỏa năng lượng tích cực</p>
+            </div>
+
+            <!-- Content Tabs -->
+            <div class="content-tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="home">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </button>
+                    <button class="tab-btn" data-tab="podcast">
+                        <i class="fas fa-podcast"></i>
+                        Podcast
+                    </button>
+                    <button class="tab-btn" data-tab="admin">
+                        <i class="fas fa-envelope"></i>
+                        Hộp thư admin
+                    </button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Home Tab - Bài viết -->
+                    <div class="tab-pane active" id="homeTab">
+                        <!-- Create Post -->
+                        <div class="create-post-card">
+                            <div class="create-post-header">
+                                <div class="user-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <input type="text" placeholder="Chia sẻ điều gì đó với cộng đồng..." class="post-input" id="postInput">
+                            </div>
+                            <div class="create-post-actions">
+                                <button class="action-btn" data-type="text">
+                                    <i class="fas fa-edit"></i>
+                                    Văn bản
+                                </button>
+                                <button class="action-btn" data-type="image">
+                                    <i class="fas fa-image"></i>
+                                    Hình ảnh
+                                </button>
+                                <button class="action-btn" data-type="quote">
+                                    <i class="fas fa-quote-left"></i>
+                                    Quote
+                                </button>
+                                <button class="btn-primary" id="publishPost">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Đăng bài
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Posts Feed -->
+                        <div class="posts-feed" id="postsFeed">
+                            <!-- Bài viết sẽ được thêm bằng JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Podcast Tab -->
+                    <div class="tab-pane" id="podcastTab">
+                        <!-- Podcast Header -->
+                        <div class="podcast-header">
+                            <h2>Podcast truyền cảm hứng</h2>
+                            <p>Lắng nghe và chia sẻ những câu chuyện ý nghĩa</p>
+                        </div>
+
+                        <!-- Podcast Grid -->
+                        <div class="podcast-grid" id="podcastGrid">
+                            <!-- Podcast sẽ được thêm bằng JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Admin Messages Tab -->
+                    <div class="tab-pane" id="adminTab">
+                        <div class="admin-messages">
+                            <div class="message-card">
+                                <div class="message-header">
+                                    <div class="admin-avatar">
+                                        <i class="fas fa-user-shield"></i>
+                                    </div>
+                                    <div class="message-info">
+                                        <h4>Admin BeYourself</h4>
+                                        <span class="message-time">2 giờ trước</span>
+                                    </div>
+                                </div>
+                                <div class="message-content">
+                                    <p>Cảm ơn bạn đã tham gia cộng đồng! Hãy chia sẻ câu chuyện của bạn để cùng lan tỏa năng lượng tích cực nhé 💖</p>
+                                </div>
+                            </div>
+
+                            <div class="message-card">
+                                <div class="message-header">
+                                    <div class="admin-avatar">
+                                        <i class="fas fa-user-shield"></i>
+                                    </div>
+                                    <div class="message-info">
+                                        <h4>Admin BeYourself</h4>
+                                        <span class="message-time">1 ngày trước</span>
+                                    </div>
+                                </div>
+                                <div class="message-content">
+                                    <p>Chào mừng bạn đến với BeYourself! Đây là nơi bạn có thể tự do là chính mình và kết nối với những người bạn đồng hành.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Comment Modal -->
+    <div class="modal" id="commentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Bình luận</h3>
+                <button class="modal-close" id="closeCommentModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="comment-list" id="commentList">
+                    <!-- Comments will be loaded here -->
+                </div>
+                <div class="comment-input">
+                    <input type="text" placeholder="Viết bình luận..." id="commentInput">
+                    <button class="btn-primary" id="postComment">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BeYourself</h3>
+                    <p>Nền tảng kết nối và chia sẻ dành cho học sinh, nơi mỗi cá nhân được là chính mình và lan tỏa năng lượng tích cực.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="../public/index.html">Trang chủ</a></li>
+                        <li><a href="../public/index.html#about">Về chúng tôi</a></li>
+                        <li><a href="../public/space.html">Không gian</a></li>
+                        <li><a href="../public/index.html#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Không gian</h4>
+                    <ul>
+                        <li><a href="#">Không gian tích cực</a></li>
+                        <li><a href="#">Không gian sáng tạo</a></li>
+                        <li><a href="#">Không gian ẩn danh</a></li>
+                        <li><a href="#">Podcast</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> beyourself.comnet2025@gmail.com</p>
+                        <p><i class="fas fa-school"></i> THPT Giồng Ông Tố</p>
+                        <p><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BeYourself. Dự án được sáng lập bởi học sinh Trường THPT Giồng Ông Tố, TP.HCM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/explore_script.js"></script>
+</body>
+</html>

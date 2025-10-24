@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Không gian BeYourself - BeYourself</title>
+    <link rel="stylesheet" href="../style/space_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background với gradient -->
+    <div class="background" id="background"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../public/index.html">BeYourself</a>
+            </div>
+            <div class="nav-menu">
+                <a href="../public/index.html" class="nav-link">Trang chủ</a>
+                <a href="../public/index.html#about" class="nav-link">Giới thiệu</a>
+                <a href="space.html" class="nav-link active">Không gian</a>
+                <a href="../public/index.html#contact" class="nav-link">Liên hệ</a>
+                <div class="nav-user" id="navUser">
+                    <div class="user-avatar" id="userAvatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="dropdown-content">
+                            <a href="../public/authen.html?action=profile" class="dropdown-item">
+                                <i class="fas fa-user-circle"></i>
+                                <span>Hồ sơ của tôi</span>
+                            </a>
+                            <a href="../public/authen.html?action=settings" class="dropdown-item">
+                                <i class="fas fa-cog"></i>
+                                <span>Cài đặt</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item logout" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-auth" id="navAuth">
+                <a href="../public/authen.html?action=login" class="auth-link login">Đăng nhập</a>
+                <a href="../public/authen.html?action=register" class="auth-link register">Đăng ký</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="space-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Không gian BeYourself</h1>
+                <p class="hero-subtitle">Nơi bạn được là chính mình, chia sẻ và kết nối</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="1247">0</span>
+                        <span class="stat-label">Bài viết</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="356">0</span>
+                        <span class="stat-label">Podcast</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="89">0</span>
+                        <span class="stat-label">Chủ đề</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spaces Grid -->
+    <section class="spaces-section">
+        <div class="container">
+            <div class="spaces-grid">
+                <!-- Không gian tích cực -->
+                <div class="space-card positive-space">
+                    <div class="space-icon">
+                        <i class="fas fa-smile-beam"></i>
+                    </div>
+                    <h3>Không gian tích cực</h3>
+                    <p>Nơi lan tỏa năng lượng tích cực và những câu chuyện truyền cảm hứng</p>
+                    <div class="space-stats">
+                        <div class="stat">
+                            <i class="fas fa-newspaper"></i>
+                            <span>568 bài viết</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-heart"></i>
+                            <span>2.4K lượt thích</span>
+                        </div>
+                    </div>
+                    <div class="space-actions">
+                        <button class="btn-primary explore-btn">
+                            <i class="fas fa-compass"></i>
+                            <a href="../public/explore.html">Khám phá</a>
+                        </button>
+                        <button class="btn-secondary follow-btn">
+                            <i class="fas fa-plus"></i>
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Không gian sáng tạo -->
+                <div class="space-card creative-space">
+                    <div class="space-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Không gian sáng tạo</h3>
+                    <p>Thể hiện bản thân qua nghệ thuật, văn chương và sáng tạo nội dung</p>
+                    <div class="space-stats">
+                        <div class="stat">
+                            <i class="fas fa-palette"></i>
+                            <span>234 tác phẩm</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-quote-left"></i>
+                            <span>189 quotes</span>
+                        </div>
+                    </div>
+                    <div class="space-actions">
+                        <button class="btn-primary explore-btn">
+                            <i class="fas fa-compass"></i>
+                            <a href="../public/explore.html">Khám phá</a>
+                        </button>
+                        <button class="btn-secondary follow-btn">
+                            <i class="fas fa-plus"></i>
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Không gian ẩn danh -->
+                <div class="space-card anonymous-space">
+                    <div class="space-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Không gian ẩn danh</h3>
+                    <p>Chia sẻ tự do mà vẫn đảm bảo sự riêng tư và an toàn</p>
+                    <div class="space-stats">
+                        <div class="stat">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Bảo mật cao</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-eye-slash"></i>
+                            <span>Ẩn danh</span>
+                        </div>
+                    </div>
+                    <div class="space-actions">
+                        <button class="btn-primary explore-btn">
+                            <i class="fas fa-compass"></i>
+                            <a href="../public/explore.html">Khám phá</a>
+                        </button>
+                        <button class="btn-secondary follow-btn">
+                            <i class="fas fa-plus"></i>
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Content -->
+    <section class="recent-content">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nội dung mới nhất</h2>
+                <p>Khám phá những bài viết và podcast mới nhất từ cộng đồng</p>
+            </div>
+
+            <div class="content-tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="articles">
+                        <i class="fas fa-newspaper"></i>
+                        Bài viết mới
+                    </button>
+                    <button class="tab-btn" data-tab="podcasts">
+                        <i class="fas fa-podcast"></i>
+                        Podcast mới
+                    </button>
+                    <button class="tab-btn" data-tab="trending">
+                        <i class="fas fa-fire"></i>
+                        Đang thịnh hành
+                    </button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Bài viết mới -->
+                    <div class="tab-pane active" id="articlesTab">
+                        <div class="articles-grid">
+                            <article class="article-card">
+                                <div class="article-header">
+                                    <div class="author">
+                                        <div class="author-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div class="author-info">
+                                            <h4>Minh Anh</h4>
+                                            <span class="post-time">2 giờ trước</span>
+                                        </div>
+                                    </div>
+                                    <div class="space-tag">
+                                        <i class="fas fa-smile-beam"></i>
+                                        Không gian tích cực
+                                    </div>
+                                </div>
+                                <div class="article-content">
+                                    <h3>Hành trình yêu bản thân của tôi</h3>
+                                    <p>"Sau nhiều năm tự ti, tôi đã học cách chấp nhận và yêu thương chính mình. Mỗi ngày là một cơ hội mới để trân trọng bản thân..."</p>
+                                </div>
+                                <div class="article-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-heart"></i>
+                                        <span>124</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-comment"></i>
+                                        <span>23</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-share"></i>
+                                        <span>8</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="article-card">
+                                <div class="article-header">
+                                    <div class="author">
+                                        <div class="author-avatar">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div class="author-info">
+                                            <h4>Tuấn Kiệt</h4>
+                                            <span class="post-time">5 giờ trước</span>
+                                        </div>
+                                    </div>
+                                    <div class="space-tag">
+                                        <i class="fas fa-paint-brush"></i>
+                                        Không gian sáng tạo
+                                    </div>
+                                </div>
+                                <div class="article-content">
+                                    <h3>Thơ: Tôi và chính tôi</h3>
+                                    <p>"Trong gương một bóng hình quen,<br>Là tôi đó, chẳng cần nên người khác,<br>Mỗi vết sẹo là câu chuyện riêng..."</p>
+                                </div>
+                                <div class="article-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-heart"></i>
+                                        <span>89</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-comment"></i>
+                                        <span>15</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-share"></i>
+                                        <span>12</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Podcast mới -->
+                    <div class="tab-pane" id="podcastsTab">
+                        <div class="podcasts-grid">
+                            <div class="podcast-card">
+                                <div class="podcast-cover">
+                                    <i class="fas fa-headphones"></i>
+                                </div>
+                                <div class="podcast-info">
+                                    <div class="space-tag">
+                                        <i class="fas fa-smile-beam"></i>
+                                        Không gian tích cực
+                                    </div>
+                                    <h3>Tự tin tỏa sáng</h3>
+                                    <p>Bí quyết xây dựng sự tự tin từ bên trong</p>
+                                    <div class="podcast-meta">
+                                        <span class="duration">28 phút</span>
+                                        <span class="plays">1.5K lượt nghe</span>
+                                    </div>
+                                </div>
+                                <button class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+
+                            <div class="podcast-card">
+                                <div class="podcast-cover">
+                                    <i class="fas fa-headphones"></i>
+                                </div>
+                                <div class="podcast-info">
+                                    <div class="space-tag">
+                                        <i class="fas fa-user-secret"></i>
+                                        Không gian ẩn danh
+                                    </div>
+                                    <h3>Nhật ký ẩn danh</h3>
+                                    <p>Những câu chuyện chưa từng kể</p>
+                                    <div class="podcast-meta">
+                                        <span class="duration">35 phút</span>
+                                        <span class="plays">892 lượt nghe</span>
+                                    </div>
+                                </div>
+                                <button class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Đang thịnh hành -->
+                    <div class="tab-pane" id="trendingTab">
+                        <div class="trending-grid">
+                            <div class="trending-card">
+                                <div class="trending-badge">
+                                    <i class="fas fa-fire"></i>
+                                    Hot
+                                </div>
+                                <div class="trending-content">
+                                    <h4>#SelfLoveChallenge</h4>
+                                    <p>Thử thách 7 ngày yêu bản thân</p>
+                                    <div class="trending-stats">
+                                        <span>1.2K tham gia</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="trending-card">
+                                <div class="trending-badge">
+                                    <i class="fas fa-arrow-up"></i>
+                                    Đang lên
+                                </div>
+                                <div class="trending-content">
+                                    <h4>Quote của ngày</h4>
+                                    <p>"Bạn xứng đáng được yêu thương theo cách bạn muốn"</p>
+                                    <div class="trending-stats">
+                                        <span>568 lượt thích</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Sẵn sàng tham gia?</h2>
+                <p>Hãy là một phần của cộng đồng BeYourself và bắt đầu chia sẻ câu chuyện của bạn</p>
+                <div class="cta-actions">
+                    <a href="../public/authen.html?action=register" class="btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Tham gia ngay
+                    </a>
+                    <a href="../public/authen.html?action=login" class="btn-secondary">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Đăng nhập
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BeYourself</h3>
+                    <p>Nền tảng kết nối và chia sẻ dành cho học sinh, nơi mỗi cá nhân được là chính mình và lan tỏa năng lượng tích cực.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="../public/../public/index.html">Trang chủ</a></li>
+                        <li><a href="../public/../public/index.html#about">Về chúng tôi</a></li>
+                        <li><a href="space.html">Không gian</a></li>
+                        <li><a href="../public/../public/index.html#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Không gian</h4>
+                    <ul>
+                        <li><a href="#">Không gian tích cực</a></li>
+                        <li><a href="#">Không gian sáng tạo</a></li>
+                        <li><a href="#">Không gian ẩn danh</a></li>
+                        <li><a href="#">Podcast</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> beyourself.comnet2025@gmail.com</p>
+                        <p><i class="fas fa-school"></i> THPT Giồng Ông Tố</p>
+                        <p><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BeYourself. Dự án được sáng lập bởi học sinh Trường THPT Giồng Ông Tố, TP.HCM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/space_script.js"></script>
+</body>
+</html>

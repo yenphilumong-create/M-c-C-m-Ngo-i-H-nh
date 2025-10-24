@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hộp thư Admin - BeYourself</title>
+    <link rel="stylesheet" href="../style/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background với gradient -->
+    <div class="background" id="background"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../public/index.html">BeYourself</a>
+            </div>
+            <div class="nav-menu">
+                <a href="../public/index.html" class="nav-link">Trang chủ</a>
+                <a href="../public/index.html#about" class="nav-link">Giới thiệu</a>
+                <a href="../public/space.html.html" class="nav-link">Không gian</a>
+                <a href="../public/index.html#contact" class="nav-link">Liên hệ</a>
+                <div class="nav-user" id="navUser">
+                    <div class="user-avatar" id="userAvatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-dropdown" id="userDropdown">
+                        <div class="dropdown-content">
+                            <a href="../public/authen.html?action=profile" class="dropdown-item">
+                                <i class="fas fa-user-circle"></i>
+                                <span>Trang cá nhân</span>
+                            </a>
+                            <a href="../public/authen.html?action=settings" class="dropdown-item">
+                                <i class="fas fa-cog"></i>
+                                <span>Cài đặt</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item logout" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-auth" id="navAuth">
+                <a href="../public/authen.html?action=login" class="auth-link login">Đăng nhập</a>
+                <a href="../public/authen.html?action=register" class="auth-link register">Đăng ký</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="chat-main">
+        <div class="container">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="breadcrumb">
+                    <a href="../public/authen.html?action=profile">Trang cá nhân</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Hộp thư admin</span>
+                </div>
+                <h1>Hộp thư Admin</h1>
+                <p>Chào mừng bạn đến với trung tâm hỗ trợ BeYourself</p>
+            </div>
+
+            <!-- Chat Container -->
+            <div class="chat-container">
+                <!-- Admin Info -->
+                <div class="admin-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="admin-details">
+                        <h3>Admin BeYourself</h3>
+                        <p class="admin-status">
+                            <span class="status-dot online"></span>
+                            Đang trực tuyến
+                        </p>
+                        <p class="admin-description">Chúng tôi ở đây để hỗ trợ bạn!</p>
+                    </div>
+                </div>
+
+                <!-- Chat Messages -->
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Welcome Message -->
+                    <div class="message admin-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-text">
+                                Chào bạn! Mình là Admin của BeYourself. Mình có thể giúp gì cho bạn hôm nay? 😊
+                            </div>
+                            <div class="message-time">Bây giờ</div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Questions -->
+                    <div class="quick-questions">
+                        <h4>Câu hỏi thường gặp:</h4>
+                        <div class="questions-grid">
+                            <button class="question-btn" data-question="Làm thế nào để đăng bài?">
+                                <i class="fas fa-edit"></i>
+                                Đăng bài
+                            </button>
+                            <button class="question-btn" data-question="Làm sao để chỉnh sửa thông tin cá nhân?">
+                                <i class="fas fa-user-edit"></i>
+                                Chỉnh sửa profile
+                            </button>
+                            <button class="question-btn" data-question="Tôi có thể xóa tài khoản không?">
+                                <i class="fas fa-trash"></i>
+                                Xóa tài khoản
+                            </button>
+                            <button class="question-btn" data-question="Các không gian hoạt động như thế nào?">
+                                <i class="fas fa-users"></i>
+                                Không gian
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input -->
+                <div class="chat-input-container">
+                    <div class="chat-input">
+                        <input type="text" placeholder="Nhập câu hỏi của bạn..." id="messageInput">
+                        <button class="send-btn" id="sendMessage">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="chat-suggestions">
+                        <span>Gợi ý:</span>
+                        <button class="suggestion-btn" data-message="Xin chào">Xin chào</button>
+                        <button class="suggestion-btn" data-message="Cảm ơn">Cảm ơn</button>
+                        <button class="suggestion-btn" data-message="Tạm biệt">Tạm biệt</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Help Section -->
+            <div class="help-section">
+                <h3>Bạn cần hỗ trợ thêm?</h3>
+                <div class="help-options">
+                    <div class="help-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email hỗ trợ</h4>
+                        <p>Gửi email chi tiết đến đội ngũ của chúng tôi</p>
+                        <a href="mailto:support@beyourself.com" class="help-link">support@beyourself.com</a>
+                    </div>
+                    <div class="help-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>Trung tâm trợ giúp</h4>
+                        <p>Tìm câu trả lời trong tài liệu hướng dẫn</p>
+                        <a href="#" class="help-link">Truy cập ngay</a>
+                    </div>
+                    <div class="help-card">
+                        <i class="fas fa-comments"></i>
+                        <h4>Cộng đồng</h4>
+                        <p>Nhận hỗ trợ từ các thành viên khác</p>
+                        <a href="explore.html" class="help-link">Tham gia</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BeYourself</h3>
+                    <p>Nền tảng kết nối và chia sẻ dành cho học sinh, nơi mỗi cá nhân được là chính mình và lan tỏa năng lượng tích cực.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="../public/index.html">Trang chủ</a></li>
+                        <li><a href="../public/index.html#about">Về chúng tôi</a></li>
+                        <li><a href="../public/space.html.html">Không gian</a></li>
+                        <li><a href="../public/index.html#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="../public/admin.html">Hộp thư admin</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                        <li><a href="#">Hướng dẫn sử dụng</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> beyourself.comnet2025@gmail.com</p>
+                        <p><i class="fas fa-school"></i> THPT Giồng Ông Tố</p>
+                        <p><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BeYourself. Dự án được sáng lập bởi học sinh Trường THPT Giồng Ông Tố, TP.HCM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/admin.js"></script>
+</body>
+</html>
